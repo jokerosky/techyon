@@ -1,0 +1,28 @@
+@import "shared/ui-kit/ui-kit.scss";
+@import "shared/ui-kit/utils.scss";
+
+.page-layout {
+  padding: $spacing 3 * $spacing;
+
+  @include flex-1;
+  flex-direction: column;
+
+  &.background {
+    background: url("background.svg") no-repeat top right;
+
+    // do not want to move the backgound higher or deal with global state, so make a crutch
+    margin-top: -4 * $spacing;
+    padding-top: 4 * $spacing;
+  }
+
+  main {
+    flex-grow: 1;
+    @include centered-content;
+  }
+}
+
+.page-header {
+  &.divider {
+    border-bottom: 1px solid $divider-color;
+  }
+}

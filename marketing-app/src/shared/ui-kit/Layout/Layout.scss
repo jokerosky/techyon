@@ -1,0 +1,22 @@
+@import "../ui-kit.scss";
+
+.layout {
+  width: $container-width;
+  min-height: $container-height / 2;
+
+  background-color: $background-color;
+
+  box-sizing: border-box;
+
+  min-height: 100vh;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: row;
+
+  padding: 4 * $spacing 0;
+}
+
+.navbar {
+  width: 100px;
+}

@@ -1,0 +1,32 @@
+@import "shared/ui-kit/ui-kit.scss";
+
+.navbar-item {
+  list-style: none;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: $spacing 0;
+
+  border-radius: $small-radius;
+
+  svg {
+    fill: $inactive-color;
+  }
+
+  &:hover {
+    background-color: $active-background-color;
+    svg {
+    }
+  }
+
+  &.active {
+    background-color: $active-background-color;
+
+    svg {
+      fill: $active-color;
+    }
+  }
+}

@@ -1,0 +1,38 @@
+// try to figure out the design system and variables
+
+// Layout
+$container-width: 1440px;
+$container-height: 900px;
+
+$small-radius: 6px;
+$big-radius: 20px;
+
+$spacing: 10px;
+
+// Colors
+$background-color: #ffffff;
+$panel-color: #f4f4f4;
+
+$divider-color: rgba(0, 0, 0, 0.1);
+
+$active-color: #3860ad;
+$active-background-color: #ebf2ff;
+$active-border-color: #5c90f3;
+
+$inactive-color: #999999; // borders, disabled elemeents
+$inactive-background-color: #f1f1f1;
+$inactive-border-color: #999999;
+
+$success-color: #46b13d;
+$danger-color: #ee6363;
+
+$emphasize-color: #181059;
+$titles-color: #222222;
+$text-color: #333333;
+
+// Typography
+$button-small-font-size: 14px;
+$button-small-line-height: 21px;
+
+$button-big-font-size: 16px;
+$button-big-line-height: 24px;

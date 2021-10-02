@@ -1,0 +1,14 @@
+@import "shared/ui-kit/ui-kit.scss";
+@import "shared/ui-kit/utils.scss";
+
+.app-navbar {
+  border-right: 1px solid $divider-color;
+
+  @include ma-flex-column();
+
+  width: 100px;
+
+  .logo {
+    margin-bottom: 3 * $spacing;
+  }
+}

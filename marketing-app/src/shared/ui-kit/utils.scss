@@ -5,17 +5,13 @@
   flex-grow: 1;
 }
 
-.flex-1 {
-  @include flex-1;
-}
-
 @mixin centered-content {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-@mixin ma-flex-column {
+@mixin flex-column {
   display: flex;
   flex-direction: column;
   align-items: center;

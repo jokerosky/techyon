@@ -1,0 +1,18 @@
+@import "shared/ui-kit/ui-kit.scss";
+
+button {
+  font-size: $button-small-font-size;
+  font-weight: $button-font-weight;
+  line-height: $button-small-line-height;
+  padding: 0.6 * $spacing 2 * $spacing;
+  border: none;
+  border-radius: $small-radius;
+
+  &.primary {
+    background-color: $success-color;
+    color: $success-text-color;
+  }
+
+  &.secondary {
+  }
+}

@@ -24,6 +24,8 @@ $inactive-background-color: #f1f1f1;
 $inactive-border-color: #999999;
 
 $success-color: #46b13d;
+$success-text-color: #fff;
+
 $danger-color: #ee6363;
 
 $emphasize-color: #181059;
@@ -31,8 +33,28 @@ $titles-color: #222222;
 $text-color: #333333;
 
 // Typography
-$button-small-font-size: 14px;
+$font-family: "Poppins";
+$base-font-size: 14px;
+$base-font-weigth: 500;
+
+$links-font-size: 13px;
+$links-font-weigth: $base-font-weigth;
+$links-line-height: 19px;
+
+$page-title-font-size: 22px;
+$page-title-font-weigth: $base-font-weigth;
+$page-title-line-height: 33px;
+
+$button-font-weight: 600;
+$button-small-font-size: $base-font-size;
 $button-small-line-height: 21px;
 
 $button-big-font-size: 16px;
 $button-big-line-height: 24px;
+
+$input-font-weight: $base-font-weigth;
+$input-font-size: 15px;
+$input-line-height: 22px;
+
+$input-label-font-size: $base-font-size;
+$input-lablel-line-height: 1.6 * $base-font-size;

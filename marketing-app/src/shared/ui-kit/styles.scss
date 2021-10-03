@@ -1,0 +1,27 @@
+@import "ui-kit.scss";
+@import "utils.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, $font-family, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: $active-color;
+  text-decoration: none;
+  font-weight: $links-font-weigth;
+  font-size: $links-font-size;
+  line-height: $links-line-height;
+}
+
+.flex-1 {
+  @include flex-1;
+}

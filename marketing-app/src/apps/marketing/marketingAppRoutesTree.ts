@@ -1,9 +1,10 @@
 export const MarketingAppRoutesTree = {
-    library: '/library',
+    savedVideos: '/saved-videos',
     createVideo: '/create-video',
 
     singIn: '/sign-in',
     createAccount: '/create-account',
+    forgotPassword: '/forgot-password',
 
     account: {
         root: '/account',

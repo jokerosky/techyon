@@ -4,7 +4,7 @@
 .app-navbar {
   border-right: 1px solid $divider-color;
 
-  @include ma-flex-column();
+  @include flex-column();
 
   width: 100px;
 

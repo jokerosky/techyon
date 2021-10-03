@@ -4,4 +4,15 @@
 .sign-in {
   justify-content: center;
   align-items: center;
+  flex-grow: 1;
+  @include flex-column;
+}
+
+.signup {
+  margin-top: 6 * $spacing;
+  font-size: $links-font-size;
+  font-weight: $links-font-weigth;
+  line-height: $links-line-height;
+
+  text-align: center;
 }

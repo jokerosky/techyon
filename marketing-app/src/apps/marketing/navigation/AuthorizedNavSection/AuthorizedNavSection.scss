@@ -1,11 +1,11 @@
 @import "shared/ui-kit/utils.scss";
 
 .authorized-nav {
-  @include ma-flex-column;
+  @include flex-column;
   flex-grow: 1;
   justify-content: space-between;
 
   nav {
-    @include ma-flex-column;
+    @include flex-column;
   }
 }

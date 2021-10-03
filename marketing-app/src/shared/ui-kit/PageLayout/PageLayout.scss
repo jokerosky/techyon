@@ -17,11 +17,25 @@
 
   main {
     flex-grow: 1;
-    @include centered-content;
+    display: flex;
+    flex-direction: column;
   }
 }
 
 .page-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  padding-bottom: 3 * $spacing;
+
+  h1 {
+    font-size: $page-title-font-size;
+    font-weight: $page-title-font-weigth;
+    line-height: $page-title-line-height;
+    color: $titles-color;
+  }
+
   &.divider {
     border-bottom: 1px solid $divider-color;
   }

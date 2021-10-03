@@ -1,6 +1,12 @@
+import { MarketingAppRoutesTree } from 'apps/marketing';
 import React from 'react';
+import { NavLink } from 'react-router-dom';
+import { PageLayout } from 'shared/ui-kit';
 
 export const CreateAccount: React.FC = props => {
-    return <>Creaet Accout Component</>
+    return <PageLayout headerTitle="Create an account" showBackgound>
+        {/* here will be account form */}
+        <NavLink to={MarketingAppRoutesTree.singIn}>Sing in</NavLink>
+    </PageLayout>
 }
 export default CreateAccount;

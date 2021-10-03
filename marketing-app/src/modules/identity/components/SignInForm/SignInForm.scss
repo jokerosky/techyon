@@ -1,0 +1,10 @@
+@import "shared/ui-kit/ui-kit.scss";
+@import "shared/ui-kit/utils.scss";
+
+.sign-in-form {
+  @include flex-column;
+
+  button {
+    margin-top: 3 * $spacing;
+  }
+}

@@ -1,4 +1,4 @@
-import { MarketingAppRoutesTree } from 'apps/marketing/marketingAppRoutes';
+import { MarketingAppRoutesTree } from 'apps/marketing';
 import React from 'react';
 import { Link } from 'react-router-dom';
 

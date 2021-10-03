@@ -1,5 +1,5 @@
 import React from 'react';
-import { MarketingAppRoutesTree } from 'apps/marketing/marketingAppRoutes';
+import { MarketingAppRoutesTree } from 'apps/marketing';
 import { NavBarItem, NavBarItemProps } from '../NavBarItem/NavBarItem';
 import { UserPic } from '../UserPic/UserPic';
 
@@ -20,7 +20,7 @@ export const AuthorizedNavSection: React.FC<AuthorizedNavSectionProps> = props =
             title: 'Create video'
         },
         {
-            to: MarketingAppRoutesTree.library,
+            to: MarketingAppRoutesTree.savedVideos,
             icon: <Library />,
             title: 'Library'
         },

@@ -1,0 +1,14 @@
+@import "shared/ui-kit/ui-kit.scss";
+@import "../PlanCards.scss";
+
+.plan-card.active {
+  @include plan-card-base(true);
+
+  .current-plan-label {
+    font-weight: 600;
+    line-height: 30px;
+    text-align: center;
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.4);
+  }
+}

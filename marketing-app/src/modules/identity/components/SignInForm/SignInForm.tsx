@@ -1,10 +1,10 @@
 import React, { useCallback, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { MarketingAppRoutesTree } from 'shared/marketing-app-core';
 
-import { MarketingAppRoutesTree } from 'apps/marketing';
 import { LoginAction, LoginModel } from 'shared/marketing-app-core/Login';
-import { Button } from 'shared/ui-kit/Button/Button';
-import { ChangeEventType, InputElement, InputType } from 'shared/ui-kit/InputElement/InputElement';
+import { Button } from 'shared/ui-kit';
+import { ChangeEventType, InputElement, InputType } from 'shared/ui-kit';
 
 import './SignInForm.scss';
 

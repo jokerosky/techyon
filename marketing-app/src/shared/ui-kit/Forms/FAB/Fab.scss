@@ -1,0 +1,14 @@
+@import "shared/ui-kit/ui-kit.scss";
+@import "shared/ui-kit/utils.scss";
+
+.fab {
+  height: 3.2 * $spacing;
+  width: 3.2 * $spacing;
+  border-radius: 1.6 * $spacing;
+  padding: 0;
+
+  cursor: pointer;
+
+  @include centered-content;
+  background-color: $active-background-color;
+}

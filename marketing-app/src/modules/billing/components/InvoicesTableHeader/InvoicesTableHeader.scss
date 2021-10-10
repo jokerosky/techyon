@@ -1,0 +1,18 @@
+@import "shared/ui-kit/ui-kit.scss";
+
+.invoice-table-header {
+  th {
+    text-transform: uppercase;
+    text-align: left;
+    color: $inactive-color;
+
+    span {
+      margin-left: $spacing;
+      font-size: 20px;
+    }
+  }
+
+  th.clickable {
+    cursor: pointer;
+  }
+}

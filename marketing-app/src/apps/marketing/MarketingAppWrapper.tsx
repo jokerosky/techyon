@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router } from "react-router-dom";
 
-import { ErrorBoundary } from 'shared/infrastructure/ErrorBoundary';
+import { ErrorBoundary } from 'shared/infrastructure';
 import { MarketingApp } from './MarketingApp';
 
 // purpose oth te component provide all necessary global dependencies like React Router,

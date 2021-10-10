@@ -1,6 +1,6 @@
-import { MarketingAppRoutesTree } from 'apps/marketing';
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { MarketingAppRoutesTree } from 'shared/marketing-app-core';
 
 import UserPicImg from './avatar-placeholder.png';
 

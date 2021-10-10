@@ -25,3 +25,7 @@ a {
 .flex-1 {
   @include flex-1;
 }
+
+.hidden {
+  display: none;
+}

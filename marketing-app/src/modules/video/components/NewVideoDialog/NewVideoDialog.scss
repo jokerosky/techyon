@@ -1,0 +1,28 @@
+@import "shared/ui-kit/ui-kit.scss";
+
+.new-video-dialog {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-height: 100vh;
+  min-width: 100vw;
+  background-color: rgba(255, 255, 255, 0.7);
+
+  form {
+    padding-left: 200px;
+    padding-top: 4 * $spacing;
+    width: $container-width;
+    margin: 0 auto;
+
+    p {
+      margin: 2 * $spacing 0;
+      padding-bottom: $spacing;
+      border-bottom: 1px solid $divider-color;
+      width: 674px;
+    }
+
+    .actions {
+      margin: 2 * $spacing 0;
+    }
+  }
+}

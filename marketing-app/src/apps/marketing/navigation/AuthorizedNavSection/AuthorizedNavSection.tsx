@@ -1,8 +1,8 @@
 import React from 'react';
-import { MarketingAppRoutesTree } from 'apps/marketing';
 import { NavBarItem, NavBarItemProps } from '../NavBarItem/NavBarItem';
-import { UserPic } from '../UserPic/UserPic';
+import { MarketingAppRoutesTree } from 'shared/marketing-app-core';
 
+import { UserPic } from '../UserPic/UserPic';
 import { ReactComponent as Camera } from 'apps/marketing/assets/camera.svg';
 import { ReactComponent as Library } from 'apps/marketing/assets/library.svg';
 
@@ -15,7 +15,7 @@ export interface AuthorizedNavSectionProps {
 export const AuthorizedNavSection: React.FC<AuthorizedNavSectionProps> = props => {
     const navItems = [
         {
-            to: MarketingAppRoutesTree.createVideo,
+            to: MarketingAppRoutesTree.editVideo,
             icon: <Camera />,
             title: 'Create video'
         },

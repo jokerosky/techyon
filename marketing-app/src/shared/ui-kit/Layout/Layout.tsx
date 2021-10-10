@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react';
-import './Layout.scss';
 import 'shared/ui-kit/utils.scss';
+import './Layout.scss';
 
 export interface LayoutProps {
     navbar: ReactElement;

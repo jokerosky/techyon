@@ -1,0 +1,10 @@
+@import "shared/ui-kit/ui-kit.scss";
+@import "../PlanCards.scss";
+
+.plan-card {
+  @include plan-card-base(false);
+
+  button {
+    width: 100%;
+  }
+}

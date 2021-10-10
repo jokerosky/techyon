@@ -1,0 +1,20 @@
+@import "shared/ui-kit/ui-kit.scss";
+
+input.material-input {
+  border: none;
+  border-bottom: 1px solid $active-border-color;
+
+  min-width: 400px;
+
+  color: $active-color;
+  font-size: $page-title-font-size;
+  font-family: $font-family;
+  font-weight: $base-font-weigth;
+  line-height: $page-title-line-height;
+
+  caret-color: $active-color;
+
+  &:focus {
+    outline: none;
+  }
+}

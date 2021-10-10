@@ -1,0 +1,60 @@
+@import "shared/ui-kit/ui-kit.scss";
+
+@mixin plan-card-base($active) {
+  width: 260px;
+  box-sizing: border-box;
+
+  border-radius: $big-radius;
+  padding: 2.4 * $spacing;
+  margin-right: 3.2 * $spacing;
+
+  @if $active {
+    background-color: $success-color;
+    margin-top: -3 * $spacing;
+  }
+
+  h4 {
+    @if $active {
+      color: $success-text-color;
+      font-size: 24px;
+    } @else {
+      color: $titles-color;
+      font-size: 22px;
+    }
+    margin-bottom: 2 * $spacing;
+  }
+
+  ul {
+    list-style: none;
+
+    li {
+      margin-bottom: 1.2 * $spacing;
+      display: flex;
+      flex-direction: row;
+
+      svg {
+        @if $active {
+          fill: $success-text-color;
+        } @else {
+          fill: $emphasize-color;
+        }
+
+        margin: $spacing 1.5 * $spacing 0 0;
+      }
+
+      p {
+        width: 184px;
+        font-family: $font-family;
+        font-size: $base-font-size;
+
+        @if $active {
+          color: $success-text-color;
+        } @else {
+          color: $titles-color;
+        }
+
+        font-weight: $base-font-weigth;
+      }
+    }
+  }
+}

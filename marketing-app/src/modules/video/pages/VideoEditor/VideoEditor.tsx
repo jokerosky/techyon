@@ -1,32 +1,52 @@
-import React from 'react';
-import { useSearchParams } from 'react-router-dom';
+import React, { useCallback, useEffect, useMemo, useState } from 'react';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 
 import { VideoPreview } from 'modules/video/components/VideoPreview/VideoPreview';
 import { VideoProperties } from 'modules/video/components/VideoProperties/VideoProperties';
-import { PageLayout } from 'shared/ui-kit';
+import { Button, PageLayout } from 'shared/ui-kit';
 import { SiteSearchParams } from 'shared/infrastructure';
-import { Video } from 'shared/marketing-app-core';
+import { Video, VideoService } from 'shared/marketing-app-core';
+import { StandardVideoService } from 'modules/video/services';
+import { NewVideoDialog } from 'modules/video/components/NewVideoDialog/NewVideoDialog';
+import { VideoSelector } from 'modules/video/components/VideoSelector/VideoSelector';
 
 export interface VideoEditorProps {
-    videos: Video[];
 }
 
 export const VideoEditor: React.FC<VideoEditorProps> = props => {
-    const { videos } = props;
-
+    const navigate = useNavigate();
     const [params] = useSearchParams();
+
     const vid = params.get(SiteSearchParams.vid);
+    const create = params.get(SiteSearchParams.create);
 
-    // TODO: externalize logic to services
-    // const video = videoService.get(vid);
+    const videoService: VideoService = useMemo(() => new StandardVideoService(), []);
+    const [currentVideo, setCurrentVideo] = useState<Video | undefined>(undefined);
 
-    const currentVideo = videos.find(v => v.id === vid);
+    const getVideo = useCallback(async () => {
+        // todo: get first video from exisitng
+        const video = vid ? await videoService.getVideo(vid) : undefined;
+        setCurrentVideo(video);
+    }, [videoService]);
 
-    const videoSelector = currentVideo ? <>Dropdown</> : '';
+    useEffect(() => {
+        getVideo();
+    }, [vid]);
 
-    return <PageLayout headerTitle={videoSelector} showDivider>
-        <VideoPreview />
+
+    const createNewVideoDialog = create !== null
+        ? <NewVideoDialog videoService={videoService} navigate={navigate} />
+        : null;
+
+    const videoSelector = <VideoSelector videoService={videoService} />;
+
+    const saveVideoButton = <Button color='primary' >Save</Button>;
+
+
+    return <PageLayout headerTitle={videoSelector} showDivider headerActions={saveVideoButton} flexDirection='row' >
+        <VideoPreview videoService={videoService} />
         <VideoProperties />
+        {createNewVideoDialog}
     </PageLayout>
 }
 

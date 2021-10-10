@@ -1,0 +1,17 @@
+@import "shared/ui-kit/ui-kit.scss";
+
+.chip {
+  margin-right: $spacing;
+  padding: 0 $spacing;
+  border-radius: $small-radius;
+  border: 1px solid $inactive-border-color;
+  color: $inactive-color;
+  font-size: $base-font-size;
+  cursor: pointer;
+
+  &.active {
+    border: 1px solid $active-border-color;
+    background-color: $active-background-color;
+    color: $active-color;
+  }
+}

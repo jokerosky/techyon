@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import { MarketingAppRoutesTree } from 'apps/marketing';
 import { PageLayout } from 'shared/ui-kit/PageLayout/PageLayout';
 import { LoginAction } from 'shared/marketing-app-core/Login';
 import { SignInForm } from 'modules/identity/components/SignInForm/SignInForm';
+import { MarketingAppRoutesTree } from 'shared/marketing-app-core';
 
 import './SignIn.scss';
 export interface SignInProps {

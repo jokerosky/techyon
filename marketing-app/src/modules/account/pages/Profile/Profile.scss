@@ -1,0 +1,23 @@
+@import "shared/ui-kit/ui-kit.scss";
+
+.profile-form {
+  .row {
+    display: flex;
+  }
+
+  .v-aligned {
+    align-items: center;
+    & > * {
+      margin-right: 2 * $spacing;
+    }
+  }
+
+  .actions-section {
+    margin-top: 3 * $spacing;
+  }
+
+  .input-element {
+    width: 360px;
+    margin-right: 4 * $spacing;
+  }
+}

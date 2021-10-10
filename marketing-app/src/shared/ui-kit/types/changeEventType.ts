@@ -1,0 +1,1 @@
+export type ChangeEventType<T = HTMLInputElement> = (e: React.ChangeEvent<T>) => void;

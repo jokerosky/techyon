@@ -1,10 +1,11 @@
-import { MarketingAppRoutesTree } from 'apps/marketing';
-import { AccountNavigation } from 'modules/account/components/AccountNavigation/AccountNavigation';
 import React, { useMemo } from 'react';
 import { Outlet } from 'react-router-dom';
+
+
 import { NavigatonLinkItem } from 'shared/infrastructure';
+import { MarketingAppRoutesTree } from 'shared/marketing-app-core';
 import { LogoutAction } from 'shared/marketing-app-core/Login';
-import { PageLayout } from 'shared/ui-kit/PageLayout/PageLayout';
+import { PageLayout, InternalNavigation } from 'shared/ui-kit';
 
 import './MyAccount.scss';
 
@@ -37,7 +38,7 @@ export const MyAccount: React.FC<MyAccountProps> = props => {
         headerTitle="My Account"
         headerActions={logoutElement}>
 
-        <AccountNavigation links={navigationLinks} />
+        <InternalNavigation links={navigationLinks} />
         <Outlet />
 
     </PageLayout>

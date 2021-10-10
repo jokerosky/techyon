@@ -5,13 +5,16 @@ import './PageLayout.scss';
 
 export interface PageLayoutProps extends PageHeaderProps {
     showBackgound?: boolean;
+
+    flexDirection?: 'column' | 'row';
 }
 
 export const PageLayout: React.FC<PageLayoutProps> = props => {
-    const { children, headerTitle, headerActions, showDivider, showBackgound } = props;
+    const { children, headerTitle, headerActions, showDivider, showBackgound, flexDirection } = props;
 
-    return <div className={`page-layout ${showBackgound ? 'background' : ''}`}>
+    return <div className={`page-layout 
+    ${showBackgound ? 'background' : ''}`}>
         <PageHeader headerTitle={headerTitle} headerActions={headerActions} showDivider={showDivider} />
-        <main>{children}</main>
+        <main className={`${flexDirection ? flexDirection : ''}`}>{children}</main>
     </div>
 }
